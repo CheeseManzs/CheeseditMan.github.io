@@ -10,7 +10,7 @@ document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat;
 
 convert = function convert(){
 
-Reactor_Power = Reactor_Power*Power_Cells;
+Reactor_Power = 1*Power_Cells;
 Reactor_Heat = Reactor_Heat - 1;
 document.getElementById("Money").innerHTML = 'Money: $'+ Money;
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
@@ -20,7 +20,7 @@ document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat;
 console.log(Reactor_Power)
 }
 sell = function sell(){
-Money = Reactor_Power
+Money = Money + Reactor_Power
 Reactor_Power = 0
 document.getElementById("Money").innerHTML = 'Money: $'+ Money;
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
