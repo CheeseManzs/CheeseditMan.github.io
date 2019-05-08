@@ -1,5 +1,29 @@
 <h1>Reactor<h1>
-<script src="Reactor.js"></script>
+
 <p id = 'Status'></p>
 <p id = 'Status-Heat'></p>
-<button onclick="convert()">Convert Energy</button>
+<button onclick="convert()" class = "fancy">Convert Energy</button>
+ .fancy {
+	background-color:#44c767;
+	-moz-border-radius:40px;
+	-webkit-border-radius:40px;
+	border-radius:40px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 18px #2f6627;
+}
+.fancy:hover {
+	background-color:#5cbf2a;
+}
+.fancy:active {
+	position:relative;
+	top:1px;
+}
+
+<script src="Reactor.js"></script>
