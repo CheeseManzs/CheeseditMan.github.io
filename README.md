@@ -1,4 +1,4 @@
-# Uranius
+# New Game - Uranius
 Uranius - A game all about manning a reactor
 
 ## How to play
