@@ -1,1 +1,12 @@
+<p id = "Status"></p>
+<script>
+  Reactor_Heat = 100;
+Reactor_Power = 100;
 
+document.getElementById("Status").innerHTML = Reactor_Power;
+
+while(Reactor_Heat > 0){
+Reactor_Power++;
+Reactor_Heat = Reactor_Heat - 1;
+}
+</script>
