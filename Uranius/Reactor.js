@@ -29,14 +29,14 @@ document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
 document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
 }
 cell = function cell(){
-if(Money > 50){
+
   Money = Money - 50;
   Power_Cells = Power_Cells + 1;
 document.getElementById("Money").innerHTML = 'Money: $'+ Money;
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
 document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
 document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
-}
+
 }
 
 function addheat(x){
