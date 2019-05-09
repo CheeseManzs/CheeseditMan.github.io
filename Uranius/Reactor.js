@@ -9,15 +9,18 @@ document.getElementById("Money").innerHTML = 'Money: $'+ Money;
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
 document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
 document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
-setInterval(function(){convert()}, 10000/Power_Cells);
+document.getElementById("Price").innerHTML = 'Price for next cell: $'+ '50*Power_Cells';
+setInterval(function(){convert()}, 1000);
 convert = function convert(){
 
 Reactor_Power = Reactor_Power + (1*Power_Cells);
-Reactor_Heat = Reactor_Heat + Math.round(1/Power_Cells);
+Reactor_Heat = Reactor_Heat + Math.round(Power_Cells/2);
+if Power_Heat > Power_Cells/2
 document.getElementById("Money").innerHTML = 'Money: $'+ Money;
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
 document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
 document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
+document.getElementById("Price").innerHTML = 'Price for next cell: $'+ '50*Power_Cells';
   
 console.log(Reactor_Power)
 }
@@ -29,17 +32,19 @@ document.getElementById("Money").innerHTML = 'Money: $'+ Money;
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
 document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
 document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
+document.getElementById("Price").innerHTML = 'Price for next cell: $'+ '50*Power_Cells';
 }
 cell = function cell(){
 
 if(Money >= 50*Power_Cells){
-  Money = Money - 50;
+  Money = Money - 50*Power_Cells;
   Power_Cells = Power_Cells + 1;
 }
 document.getElementById("Money").innerHTML = 'Money: $'+ Money;
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
 document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
 document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
+document.getElementById("Price").innerHTML = 'Price for next cell: $'+ '50*Power_Cells';
 
 }
 
