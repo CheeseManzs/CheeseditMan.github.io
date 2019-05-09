@@ -3,11 +3,13 @@ var Reactor_Power = 0;
 var Money = 100;
 var Power_Cells = 1;
 
+
+
 document.getElementById("Money").innerHTML = 'Money: $'+ Money;
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
 document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
 document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
-
+setInterval(function(){convert()}, 10000/Power_Cells);
 convert = function convert(){
 
 Reactor_Power = Reactor_Power + (1*Power_Cells);
@@ -45,7 +47,5 @@ function addheat(x){
 heat = heat + x
 
 }
-setInterval(convert(), 10000/Power_Cells)
-
 
 
