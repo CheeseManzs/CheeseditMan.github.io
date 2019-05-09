@@ -45,4 +45,7 @@ function addheat(x){
 heat = heat + x
 
 }
+setInterval(convert(), 10000/Power_Cells)
+
+
 
