@@ -1,3 +1,4 @@
+// Reactor Variables
 var Reactor_Heat = 5000;
 var Reactor_Power = 0;
 var Money = 100;
@@ -15,6 +16,7 @@ convert = function convert(){
 
 Reactor_Power = Reactor_Power + (1*Power_Cells);
 Reactor_Heat = Reactor_Heat + Math.round(Power_Cells/2);
+// Overheat:
 if(Power_Heat > Power_Cells/2){
 Money = Money/2
 }
