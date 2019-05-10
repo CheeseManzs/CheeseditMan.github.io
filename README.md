@@ -1,7 +1,7 @@
-# New Game - Uranius
+## New Game - Uranius
 Uranius - A game all about manning a reactor
 
-## How to play
+### How to play
 
   Keep an eye on that heat!                         
   Too little and you run out of power...
