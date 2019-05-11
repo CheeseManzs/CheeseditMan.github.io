@@ -71,6 +71,13 @@ if(Money >= 50*Power_Cells){
   Money = Money - 50*Power_Cells;
   Power_Cells = Power_Cells + 1;
 }
+document.getElementById("Money").innerHTML = 'Money: $'+ Money;
+document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
+document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
+document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
+document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
+document.getElementById("Tower").innerHTML = 'Reactor Towers: '+ Reactor_Towers;
+}
 tower = function tower(){
   if(Power_Cells > 14){
     Reactor_Towers = Reactor_Towers + 1;
