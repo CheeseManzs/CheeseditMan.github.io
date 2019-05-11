@@ -131,7 +131,7 @@ heat = heat + x
 
 }
 function employee(){
- employee = employee + 1 
+ Employees = Employees + 1 
   document.getElementById("Money").innerHTML = 'Money: $'+ Money;
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
 document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
