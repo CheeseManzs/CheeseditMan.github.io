@@ -11,7 +11,7 @@ document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
 document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
 document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
 document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
-setInterval(function(){autoconvert()}, 1000);
+setInterval(function(){autoconvert()}, 100);
 convert = function convert(){
 
 Reactor_Power = Reactor_Power + (1*Power_Cells);
