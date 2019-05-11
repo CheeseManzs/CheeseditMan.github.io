@@ -5,6 +5,7 @@ var Money = 100;
 var Power_Cells = 1;
 var Reactor_Towers = 0;
 var Reactor_Clusters = 0;
+var Employees = 1;
 
 
 
@@ -15,6 +16,7 @@ document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + '
 document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
 document.getElementById("Tower").innerHTML = 'Reactor Towers: '+ Reactor_Towers;
 document.getElementById("Cluster").innerHTML = 'Reactors: '+ Reactor_Clusters;
+document.getElementById("Hires").innerHTML = 'Employees: '+ Employees;
 setInterval(function(){autoconvert()}, 100);
 convert = function convert(){
 
@@ -33,6 +35,7 @@ document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + '
 document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
 document.getElementById("Tower").innerHTML = 'Reactor Towers: '+ Reactor_Towers;
   document.getElementById("Cluster").innerHTML = 'Reactors: '+ Reactor_Clusters;
+  document.getElementById("Hires").innerHTML = 'Employees: '+ Employees;
   
 console.log(Reactor_Power)
 }
@@ -43,7 +46,10 @@ autoconvert = function autoconvert(){
 Reactor_Power = Reactor_Power + (1*Power_Cells);
 Reactor_Heat = Reactor_Heat + Math.round(Power_Cells/2);
 tower()
-
+Money = Money - (Power_Cells*Employees) - Employees
+if(Money < 1){
+ Employees = 0 
+}
 // Overheat:
 if(Reactor_Heat > Power_Cells*100){
 sell()
@@ -56,6 +62,7 @@ document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + '
 document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
 document.getElementById("Tower").innerHTML = 'Reactor Towers: '+ Reactor_Towers;
   document.getElementById("Cluster").innerHTML = 'Reactors: '+ Reactor_Clusters;
+  document.getElementById("Hires").innerHTML = 'Employees: '+ Employees;
   
 console.log(Reactor_Power)
 }
@@ -72,6 +79,7 @@ document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + '
 document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
 document.getElementById("Tower").innerHTML = 'Reactor Towers: '+ Reactor_Towers;
   document.getElementById("Cluster").innerHTML = 'Reactors: '+ Reactor_Clusters;
+  document.getElementById("Hires").innerHTML = 'Employees: '+ Employees;
 }
 cell = function cell(){
 
@@ -86,6 +94,7 @@ document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + '
 document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
 document.getElementById("Tower").innerHTML = 'Reactor Towers: '+ Reactor_Towers;
   document.getElementById("Cluster").innerHTML = 'Reactors: '+ Reactor_Clusters;
+  document.getElementById("Hires").innerHTML = 'Employees: '+ Employees;
 }
 tower = function tower(){
   if(Power_Cells > 14){
@@ -99,6 +108,7 @@ document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + '
 document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
 document.getElementById("Tower").innerHTML = 'Reactor Towers: '+ Reactor_Towers;
   document.getElementById("Cluster").innerHTML = 'Reactors: '+ Reactor_Clusters;
+  document.getElementById("Hires").innerHTML = 'Employees: '+ Employees;
 
 }
 
@@ -114,10 +124,22 @@ document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + '
 document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
 document.getElementById("Tower").innerHTML = 'Reactor Towers: '+ Reactor_Towers;
 document.getElementById("Cluster").innerHTML = 'Reactors: '+ Reactor_Clusters;
+  document.getElementById("Hires").innerHTML = 'Employees: '+ Employees;
 }
 function addheat(x){
 heat = heat + x
 
+}
+function employee(){
+ employee = employee + 1 
+  document.getElementById("Money").innerHTML = 'Money: $'+ Money;
+document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
+document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
+document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
+document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
+document.getElementById("Tower").innerHTML = 'Reactor Towers: '+ Reactor_Towers;
+document.getElementById("Cluster").innerHTML = 'Reactors: '+ Reactor_Clusters;
+  document.getElementById("Hires").innerHTML = 'Employees: '+ Employees;
 }
 
 
