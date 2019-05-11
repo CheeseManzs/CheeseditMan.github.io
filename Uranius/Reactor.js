@@ -42,6 +42,8 @@ autoconvert = function autoconvert(){
 
 Reactor_Power = Reactor_Power + (1*Power_Cells);
 Reactor_Heat = Reactor_Heat + Math.round(Power_Cells/2);
+tower()
+
 // Overheat:
 if(Reactor_Heat > Power_Cells*100){
 sell()
