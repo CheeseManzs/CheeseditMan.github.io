@@ -10,7 +10,7 @@ document.getElementById("Money").innerHTML = 'Money: $'+ Math.round(Money);
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
 document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
 document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
-document.getElementById("Price").innerHTML = 'Price for next cell: $'+ '50*Power_Cells';
+document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
 setInterval(function(){convert()}, 1000);
 convert = function convert(){
 
@@ -24,7 +24,7 @@ document.getElementById("Money").innerHTML = 'Money: $'+ Money;
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
 document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
 document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
-document.getElementById("Price").innerHTML = 'Price for next cell: $'+ '50*Power_Cells';
+document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
   
 console.log(Reactor_Power)
 }
@@ -36,7 +36,7 @@ document.getElementById("Money").innerHTML = 'Money: $'+ Money;
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
 document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
 document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
-document.getElementById("Price").innerHTML = 'Price for next cell: $'+ '50*Power_Cells';
+document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
 }
 cell = function cell(){
 
@@ -48,7 +48,7 @@ document.getElementById("Money").innerHTML = 'Money: $'+ Money;
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
 document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
 document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
-document.getElementById("Price").innerHTML = 'Price for next cell: $'+ '50*Power_Cells';
+document.getElementById("Price").innerHTML = 'Price for next cell: $'+ 50*Power_Cells;
 
 }
 
