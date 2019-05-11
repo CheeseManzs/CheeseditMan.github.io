@@ -6,7 +6,7 @@ var Power_Cells = 1;
 
 
 
-document.getElementById("Money").innerHTML = 'Money: $'+ Money;
+document.getElementById("Money").innerHTML = 'Money: $'+ Math.round(Money);
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
 document.getElementById("Status-Cell").innerHTML = 'Power Cells:'+ Power_Cells;
 document.getElementById("Status-Heat").innerHTML = 'Heat: '+ Reactor_Heat/10 + ' C';
