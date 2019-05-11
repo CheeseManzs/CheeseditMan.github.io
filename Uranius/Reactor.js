@@ -17,7 +17,7 @@ convert = function convert(){
 Reactor_Power = Reactor_Power + (1*Power_Cells);
 Reactor_Heat = Reactor_Heat + Math.round(Power_Cells/2);
 // Overheat:
-if(Reactor_Heat > Power_Cells*10){
+if(Reactor_Heat > Power_Cells*100){
 Money = Money/2
 }
 document.getElementById("Money").innerHTML = 'Money: $'+ Money;
