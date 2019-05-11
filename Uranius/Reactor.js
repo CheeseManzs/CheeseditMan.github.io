@@ -20,7 +20,7 @@ document.getElementById("Hires").innerHTML = 'Employees: '+ Employees;
 setInterval(function(){autoconvert()}, 100);
 convert = function convert(){
 
-Reactor_Power = (Reactor_Power + (1*Power_Cells))*Employees;
+Reactor_Power = (Reactor_Power + (1*Power_Cells))*(Employees+1);
 Reactor_Heat = Reactor_Heat + Math.round(Power_Cells/2);
 Power_Cells = Power_Cells + (Reactor_Towers*20)
 Reactor_Towers = Reactor_Towers + (Reactor_Clusters*10)
