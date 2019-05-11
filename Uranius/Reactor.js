@@ -37,7 +37,7 @@ Reactor_Heat = Reactor_Heat + Math.round(Power_Cells/2);
 // Overheat:
 if(Reactor_Heat > Power_Cells*100){
 sell()
-cell()
+
 }
 document.getElementById("Money").innerHTML = 'Money: $'+ Money;
 document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
