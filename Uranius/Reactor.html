@@ -1,67 +1,107 @@
-<a href="../index.html"><img src="GithubStylish.png" alt="pixel-fonts"></a>
-<p  style="font-family:'Courier New'" id = 'Status'></p>
-<p  style="font-family:'Courier New'" id = 'Status-Heat'></p>
-<p style="font-family:'Courier New'" id = 'Money'></p>
-<p style="font-family:'Courier New'" id = 'Status-Cell'></p>
-<p style="font-family:'Courier New'" id = 'Tower'></p>
-<p style="font-family:'Courier New'" id = 'Cluster'></p>
-<p style="font-family:'Courier New'" id = 'Plan'></p>
-<p style="font-family:'Courier New'" id = 'Hires'></p>
-<p style="font-family:'Courier New'" id = 'Halls'></p>
-<p style="font-family:'Courier New'" id = 'uran'></p>
-<p style="font-family:'Courier New'" id = 'pluto'></p>
-
-<style>
-  body{
-  background-color: #16f9a6
-  }
-
-</style>
-<h1>Reactor Board<h1>
+<div class="flex-container">
+	<div>
 
 
 
-<button onclick="convert()" class = "fancy">Convert Energy</button>
-<button onclick="sell()" class = "fancy">Sell Energy</button>
-<button onclick="employee()" class="fancy">Hire Employee</button>
-<h2>Reactizon</h2>
-<p style="font-family:'Courier New'" id = 'Price'></p>
-<p style="font-family:'Courier New'">20 Power Cells for next Reactor Tower</p>
-<p style="font-family:'Courier New'">100 Reactor Towers for next Reactor</p>
-<p style="font-family:'Courier New'">$10,000 for next Sleeping Hall</p>
-<button onclick="cell()" class = "fancy">Buy Energy Cells</button>
-<button onclick="tower()" class = "fancy">Buy Reactor Towers</button>
-<button onclick="cluster()" class="fancy">Buy Reactors</button>
-<button onclick="hall()" class="fancy">Buy Sleeping Halls</button>
-<h2>Fusion Centre</h2>
-<p style="font-family:'Courier New'">2,000 Reactors for 1 Uranium</p>
-<p style="font-family:'Courier New'">20 Uranium for 1 Plutonium</p>
-<button onclick="uranium()" class="fancy">Create Uranium</button>
-<button onclick="plutonium()" class="fancy">Create Plutonium</button>
 
 
- <style>
-	 .fancy {
-	background-color:#44c767;
-	-moz-border-radius:40px;
-	-webkit-border-radius:40px;
-	border-radius:40px;
-	border:1px solid #18ab29;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Verdana;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 18px #2f6627;
-}
-.fancy:hover {
-	background-color:#5cbf2a;
-}
-.fancy:active {
-	position:relative;
-	top:1px;
-}
+			<h1>Reactor Board</h1>
+	<p  style="font-family:'Courier New'" id = 'Status'></p><p  style="font-family:'Courier New'" id = 'Status-Heat'></p>
+
+	<p style="font-family:'Courier New'" id = 'Money'></p>
+	<p style="font-family:'Courier New'" id = 'Status-Cell'></p>
+	<p style="font-family:'Courier New'" id = 'Tower'></p>
+	<p style="font-family:'Courier New'" id = 'Cluster'></p>
+	<p style="font-family:'Courier New'" id = 'Plan'></p>
+	<p style="font-family:'Courier New'" id = 'Hires'></p>
+	<p style="font-family:'Courier New'" id = 'Halls'></p>
+	<p style="font-family:'Courier New'" id = 'uran'></p>
+	<p style="font-family:'Courier New'" id = 'pluto'></p>
+	
+	<style>
+	body{
+	background-color: rgb(150, 201, 182)
+	}
+
 	</style>
-<script src="Reactor.js"></script>
+	
+
+
+
+	<button onclick="convert()" class = "fancy">Convert Energy</button>
+	<button onclick="sell()" class = "fancy">Sell Energy</button>
+	<button onclick="employee()" class="fancy">Hire Employee</button>
+	</div>
+	<div>
+	
+	<h2>Reactizon</h2>
+	
+	<p style="font-family:'Courier New'" id = 'Price'></p>
+	<p style="font-family:'Courier New'">20 Power Cells for next Reactor Tower</p>
+	<p style="font-family:'Courier New'">100 Reactor Towers for next Reactor</p>
+	<p style="font-family:'Courier New'">$10,000 for next Sleeping Hall</p>
+	<button onclick="cell()" class = "fancy">Buy Energy Cells</button>
+	<button onclick="tower()" class = "fancy">Buy Reactor Towers</button>
+	<button onclick="cluster()" class="fancy">Buy Reactors</button>
+	<button onclick="hall()" class="fancy">Buy Sleeping Halls</button>
+	</div>
+	<div>
+	<h2>Fusion Centre</h2>
+	<p style="font-family:'Courier New'">2,000 Reactors for 1 Uranium</p>
+	<p style="font-family:'Courier New'">20 Uranium for 1 Plutonium</p>
+	<button onclick="uranium()" class="fancy">Create Uranium</button>
+	<button onclick="plutonium()" class="fancy">Create Plutonium</button>
+	<button onclick="Research()" class="fancy">Research</button>
+	
+	</div>
+	<div>
+			
+			<h2>Reaserch Centre</h2>
+
+			<p style="font-family: 'Courier New'" id = 'Research'>
+				
+	</div>
+	<style>
+		.flex-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		
+		}
+		p {
+
+			border-left: 6px solid slategrey;
+			
+			padding:8px 31px;
+
+		}
+		.fancy {
+		background-color:#8f8f8f;
+		-moz-border-radius:0;
+		-webkit-border-radius:0;
+		border-radius:0;
+		border:0px solid #18ab29;
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:Verdana;
+		font-size:17px;
+		padding:16px 31px;
+		text-decoration:none;
+		text-shadow:0px 1px 18px #2f6627;
+		border-left: 6px solid slategrey;
+	}
+
+	.fancy:hover {
+		background-color:#aafdea;
+	}
+	.fancy:active {
+		position:relative;
+		top:1px;
+	}
+		</style>
+	<script src="Reactor.js"></script>
+
+
+</div>
+<a href="../index.html"><img src="GithubStylish.png" alt="pixel-fonts"></a>
