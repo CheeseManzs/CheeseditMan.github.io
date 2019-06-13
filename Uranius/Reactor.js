@@ -5,7 +5,7 @@ var Reactor_Power = 0;
 var Money = 100;
 var Power_Cells = 1;
 var Reactor_Towers = 0;
-var Reactor_Clusters = 0;
+var Reactor_Clusters = 100000;
 var Employees = 1;
 var SleepingHalls = 1;
 var Uranium = 0;
@@ -214,14 +214,13 @@ function uranium(){
 
 }
 
-function Research(){
+function research(){
 
 
-
+if(Money >= 300000){
   Research += 1;
   Money -= 300000;
-
-
+}
 
   document.getElementById("Money").innerHTML = 'Money: $'+ Money;
   document.getElementById("Status").innerHTML = 'Power:'+ Reactor_Power;
@@ -232,6 +231,7 @@ function Research(){
   document.getElementById("Cluster").innerHTML = 'Reactors: '+ Reactor_Clusters;
     document.getElementById("Hires").innerHTML = 'Employees: '+ Employees;
     document.getElementById("Halls").innerHTML = 'Sleeping Halls: '+ SleepingHalls;
+    document.getElementById("Research").innerHTML = 'Research: '+ Research;
 
 
 }
