@@ -27,8 +27,10 @@
 	
 
 
-
+	<div class="tooltip">
 	<button onclick="convert()" class = "fancy">Convert Energy</button>
+	<span class="tooltiptext">Turn Power into MONEY!!!</span>
+	  </div>
 	<button onclick="sell()" class = "fancy">Sell Energy</button>
 	<button onclick="employee()" class="fancy">Hire Employee</button>
 	</div>
@@ -47,11 +49,11 @@
 	</div>
 	<div>
 	<h2>Fusion Centre</h2>
-	<p style="font-family:'Courier New'">2,000 Reactors for 1 Uranium</p>
-	<p style="font-family:'Courier New'">20 Uranium for 1 Plutonium</p>
+	<p style="font-family:'Courier New'">2,000 Reactors and 10 Research for 1 Uranium</p>
+	<p style="font-family:'Courier New'">20 Uranium and 100 Research for 1 Plutonium</p>
 	<button onclick="uranium()" class="fancy">Create Uranium</button>
 	<button onclick="plutonium()" class="fancy">Create Plutonium</button>
-	<button onclick="Research()" class="fancy">Research</button>
+	<button onclick="research()" class="fancy">Research</button>
 	
 	</div>
 	<div>
@@ -76,7 +78,7 @@
 
 		}
 		.fancy {
-		background-color:#8f8f8f;
+		background-color:silver;
 		-moz-border-radius:0;
 		-webkit-border-radius:0;
 		border-radius:0;
@@ -86,19 +88,87 @@
 		color:#ffffff;
 		font-family:Verdana;
 		font-size:17px;
-		padding:16px 31px;
+		padding:16px 10px;
 		text-decoration:none;
-		text-shadow:0px 1px 18px #2f6627;
-		border-left: 6px solid slategrey;
+		border-left: 6px solid gray;
+		transition: all 0.3s;
 	}
 
 	.fancy:hover {
-		background-color:#aafdea;
+		background-color: seagreen;
+		padding:18px 16px;
+		font-size:17.5px;
+		border-left: 0px solid gray;
+		display: inline-block;
+		transform: rotate(1deg);
 	}
+	.fancy span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.fancy span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.fancy:hover span {
+  padding-right: 25px;
+}
+
+.fancy:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 	.fancy:active {
 		position:relative;
 		top:1px;
 	}
+
+
+
+
+
+
+	.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: salmon;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+
+
+
+
+
+
+
 		</style>
 	<script src="Reactor.js"></script>
 
