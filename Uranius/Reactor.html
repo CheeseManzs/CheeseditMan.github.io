@@ -1,3 +1,4 @@
+
 <div class="flex-container">
 	<div>
 
@@ -9,14 +10,14 @@
 	<p  style="font-family:'Courier New'" id = 'Status'></p><p  style="font-family:'Courier New'" id = 'Status-Heat'></p>
 
 	<p style="font-family:'Courier New'" id = 'Money'></p>
-	<p style="font-family:'Courier New'" id = 'Status-Cell'></p>
-	<p style="font-family:'Courier New'" id = 'Tower'></p>
-	<p style="font-family:'Courier New'" id = 'Cluster'></p>
-	<p style="font-family:'Courier New'" id = 'Plan'></p>
-	<p style="font-family:'Courier New'" id = 'Hires'></p>
-	<p style="font-family:'Courier New'" id = 'Halls'></p>
-	<p style="font-family:'Courier New'" id = 'uran'></p>
-	<p style="font-family:'Courier New'" id = 'pluto'></p>
+	<p style="font-family:'Courier New'" hidden id = 'Status-Cell'></p>
+	<p style="font-family:'Courier New'" hidden id = 'Tower'></p>
+	<p style="font-family:'Courier New'" hidden id = 'Cluster'></p>
+	<p style="font-family:'Courier New'" hidden id = 'Plan'></p>
+	<p style="font-family:'Courier New'" hidden id = 'Hires'></p>
+	<p style="font-family:'Courier New'" hidden id = 'Halls'></p>
+	<p style="font-family:'Courier New'" hidden id = 'uran'></p>
+	<p style="font-family:'Courier New'" hideen id = 'pluto'></p>
 	
 	<style>
 	body{
@@ -27,10 +28,10 @@
 	
 
 
-	<div class="tooltip">
-	<button onclick="convert()" class = "fancy">Convert Energy</button>
-	<span class="tooltiptext">Turn Power into MONEY!!!</span>
-	  </div>
+
+	<button hidden onclick="convert()" display="none;" class="fancy" id="con">Convert Energy</button>
+	
+
 	<button onclick="sell()" class = "fancy">Sell Energy</button>
 	<button onclick="employee()" class="fancy">Hire Employee</button>
 	</div>
@@ -39,10 +40,14 @@
 	<h2>Reactizon</h2>
 	
 	<p style="font-family:'Courier New'" id = 'Price'></p>
-	<p style="font-family:'Courier New'">20 Power Cells for next Reactor Tower</p>
+	
 	<p style="font-family:'Courier New'">100 Reactor Towers for next Reactor</p>
 	<p style="font-family:'Courier New'">$10,000 for next Sleeping Hall</p>
-	<button onclick="cell()" class = "fancy">Buy Energy Cells</button>
+
+	<div class="tooltip">
+		<button onclick="cell()" class = "fancy">Buy Energy Cells</button>
+		<span class="tooltiptext" id="Price"></span>
+</div>	
 	<button onclick="tower()" class = "fancy">Buy Reactor Towers</button>
 	<button onclick="cluster()" class="fancy">Buy Reactors</button>
 	<button onclick="hall()" class="fancy">Buy Sleeping Halls</button>
@@ -63,105 +68,9 @@
 			<p style="font-family: 'Courier New'" id = 'Research'>
 				
 	</div>
-	<style>
-		.flex-container {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
+	<style src=""></style>
 		
-		}
-		p {
 
-			border-left: 6px solid slategrey;
-			
-			padding:8px 31px;
-
-		}
-		.fancy {
-		background-color:silver;
-		-moz-border-radius:0;
-		-webkit-border-radius:0;
-		border-radius:0;
-		border:0px solid #18ab29;
-		display:inline-block;
-		cursor:pointer;
-		color:#ffffff;
-		font-family:Verdana;
-		font-size:17px;
-		padding:16px 10px;
-		text-decoration:none;
-		border-left: 6px solid gray;
-		transition: all 0.3s;
-	}
-
-	.fancy:hover {
-		background-color: seagreen;
-		padding:18px 16px;
-		font-size:17.5px;
-		border-left: 0px solid gray;
-		display: inline-block;
-		transform: rotate(1deg);
-	}
-	.fancy span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.fancy span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.fancy:hover span {
-  padding-right: 25px;
-}
-
-.fancy:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-	.fancy:active {
-		position:relative;
-		top:1px;
-	}
-
-
-
-
-
-
-	.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: salmon;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-</style>
 
 
 
@@ -171,6 +80,7 @@
 
 		</style>
 	<script src="Reactor.js"></script>
+	<link rel="stylesheet" type="text/css" href="Reactor.CSS">
 
 
 </div>
