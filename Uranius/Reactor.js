@@ -1,12 +1,12 @@
 // Reactor Variables
-var mod = 999999999;
+var mod = 1;
 var Research = 1;
 var Reactor_Heat = 0;
 var Reactor_Power = 0;
 var Money = 50*mod;
 var Power_Cells = 1;
-var Reactor_Towers = 0 + mod;
-var Reactor_Clusters =  + mod;
+var Reactor_Towers = 0;
+var Reactor_Clusters = 0;
 var Employees = 1;
 var SleepingHalls = 1;
 var Uranium = 0;
