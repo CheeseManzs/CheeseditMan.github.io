@@ -24,7 +24,7 @@ document.getElementById("Cluster").innerHTML = 'Reactors: '+ Reactor_Clusters;
 document.getElementById("Hires").innerHTML = 'Employees: '+ Employees + ' Price: ' + Power_Cells*10*Employees;
 document.getElementById("Halls").innerHTML = 'Sleeping Halls: '+ SleepingHalls;
 document.getElementById("Plan").innerHTML = 'Reactor Plans: '+ Plans;
-setInterval(function(){autoconvert()}, 500);
+setInterval(function(){autoconvert()}, 500/(1+(Employees/5)));
 convert = function convert(){
 
 
